@@ -51,7 +51,7 @@ const Register = () => {
       
       toast({
         title: "Registration Successful! 🎉",
-        description: "Welcome to Camp Renewal! Check your email for confirmation details.",
+        description: "Welcome to Halwot Questers! Check your email for confirmation details.",
       });
       
       reset();
@@ -68,13 +68,13 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50 py-8 px-4">
+    <div className="min-h-screen bg-white py-8 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="mb-8 animate-fade-in">
           <Button
             variant="ghost"
-            className="mb-4 hover:bg-white/50"
+            className="mb-4 hover:bg-gray-100"
             onClick={() => navigate('/')}
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -82,8 +82,8 @@ const Register = () => {
           </Button>
           
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Join Camp <span className="text-green-600">Renewal</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Join Halwot <span className="text-orange-500">Questers</span>
             </h1>
             <p className="text-lg text-gray-600">
               Fill out the form below to secure your spot for an unforgettable summer experience!
@@ -92,9 +92,9 @@ const Register = () => {
         </div>
 
         {/* Registration Form */}
-        <Card className="shadow-2xl border-0 bg-white/90 backdrop-blur-sm animate-scale-in">
+        <Card className="shadow-2xl border border-gray-200 bg-white animate-scale-in">
           <CardHeader className="text-center pb-6">
-            <CardTitle className="text-2xl text-gray-800">Registration Form</CardTitle>
+            <CardTitle className="text-2xl text-black">Registration Form</CardTitle>
             <CardDescription className="text-gray-600">
               Please provide accurate information for a smooth registration process
             </CardDescription>
@@ -104,14 +104,14 @@ const Register = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Full Name */}
               <div className="space-y-2">
-                <Label htmlFor="fullName" className="text-gray-700 font-medium">
+                <Label htmlFor="fullName" className="text-black font-medium">
                   Full Name *
                 </Label>
                 <Input
                   id="fullName"
                   {...register("fullName")}
                   placeholder="Enter your full name"
-                  className="h-12 border-gray-300 focus:border-green-500 focus:ring-green-500"
+                  className="h-12 border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                 />
                 {errors.fullName && (
                   <p className="text-red-500 text-sm">{errors.fullName.message}</p>
@@ -120,7 +120,7 @@ const Register = () => {
 
               {/* Age */}
               <div className="space-y-2">
-                <Label htmlFor="age" className="text-gray-700 font-medium">
+                <Label htmlFor="age" className="text-black font-medium">
                   Age *
                 </Label>
                 <Input
@@ -128,7 +128,7 @@ const Register = () => {
                   type="number"
                   {...register("age")}
                   placeholder="Enter your age (13-18)"
-                  className="h-12 border-gray-300 focus:border-green-500 focus:ring-green-500"
+                  className="h-12 border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                 />
                 {errors.age && (
                   <p className="text-red-500 text-sm">{errors.age.message}</p>
@@ -137,14 +137,14 @@ const Register = () => {
 
               {/* Parent/Guardian Name */}
               <div className="space-y-2">
-                <Label htmlFor="parentName" className="text-gray-700 font-medium">
+                <Label htmlFor="parentName" className="text-black font-medium">
                   Parent/Guardian Name *
                 </Label>
                 <Input
                   id="parentName"
                   {...register("parentName")}
                   placeholder="Enter parent or guardian's full name"
-                  className="h-12 border-gray-300 focus:border-green-500 focus:ring-green-500"
+                  className="h-12 border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                 />
                 {errors.parentName && (
                   <p className="text-red-500 text-sm">{errors.parentName.message}</p>
@@ -153,14 +153,14 @@ const Register = () => {
 
               {/* Emergency Contact */}
               <div className="space-y-2">
-                <Label htmlFor="emergencyContact" className="text-gray-700 font-medium">
+                <Label htmlFor="emergencyContact" className="text-black font-medium">
                   Emergency Contact *
                 </Label>
                 <Input
                   id="emergencyContact"
                   {...register("emergencyContact")}
                   placeholder="Phone number and contact person"
-                  className="h-12 border-gray-300 focus:border-green-500 focus:ring-green-500"
+                  className="h-12 border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                 />
                 {errors.emergencyContact && (
                   <p className="text-red-500 text-sm">{errors.emergencyContact.message}</p>
@@ -169,7 +169,7 @@ const Register = () => {
 
               {/* Email */}
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-gray-700 font-medium">
+                <Label htmlFor="email" className="text-black font-medium">
                   Email Address *
                 </Label>
                 <Input
@@ -177,7 +177,7 @@ const Register = () => {
                   type="email"
                   {...register("email")}
                   placeholder="your.email@example.com"
-                  className="h-12 border-gray-300 focus:border-green-500 focus:ring-green-500"
+                  className="h-12 border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm">{errors.email.message}</p>
@@ -186,11 +186,11 @@ const Register = () => {
 
               {/* T-shirt Size */}
               <div className="space-y-2">
-                <Label htmlFor="tshirtSize" className="text-gray-700 font-medium">
+                <Label htmlFor="tshirtSize" className="text-black font-medium">
                   T-shirt Size *
                 </Label>
                 <Select onValueChange={(value) => setValue("tshirtSize", value)}>
-                  <SelectTrigger className="h-12 border-gray-300 focus:border-green-500 focus:ring-green-500">
+                  <SelectTrigger className="h-12 border-gray-300 focus:border-orange-500 focus:ring-orange-500">
                     <SelectValue placeholder="Select your t-shirt size" />
                   </SelectTrigger>
                   <SelectContent className="bg-white">
@@ -209,14 +209,14 @@ const Register = () => {
 
               {/* Allergies */}
               <div className="space-y-2">
-                <Label htmlFor="allergies" className="text-gray-700 font-medium">
+                <Label htmlFor="allergies" className="text-black font-medium">
                   Allergies or Medical Conditions
                 </Label>
                 <Textarea
                   id="allergies"
                   {...register("allergies")}
                   placeholder="Please list any allergies, medical conditions, or special dietary needs..."
-                  className="min-h-[120px] border-gray-300 focus:border-green-500 focus:ring-green-500 resize-none"
+                  className="min-h-[120px] border-gray-300 focus:border-orange-500 focus:ring-orange-500 resize-none"
                 />
               </div>
 
@@ -224,7 +224,7 @@ const Register = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-14 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold text-lg rounded-lg transform hover:scale-[1.02] transition-all duration-300 shadow-lg"
+                className="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg rounded-lg transform hover:scale-[1.02] transition-all duration-300 shadow-lg"
               >
                 {isSubmitting ? "Processing Registration..." : "Complete Registration"}
               </Button>
